@@ -1,0 +1,23 @@
+{
+  "name": "module_get",
+  "version": "1.0.0",
+  "description": "pruebas con nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "api",
+    "get"
+  ],
+  "author": "Ramses Landero",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "node": "^17.7.2",
+    "nodemon": "^2.0.16",
+    "sequelize": "^6.19.0"
+  }
+}
