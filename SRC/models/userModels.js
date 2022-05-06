@@ -1,10 +1,8 @@
-// const Sequelize = require(Sequelize)
+//Datatypes y Sequelize hacen exactamente lo mismo, usara preferentemente datatypes
 const DataTypes = require('sequelize/lib/data-types');
-
-//import dataBase from ('../config/db')
 const dB = require('../config/db')
 
-
+//Define modelo Users
 exports.Users = dB.sequelize.define('users', {
     id:{
         type: DataTypes.INTEGER,

@@ -1,3 +1,4 @@
+///****routes */
 const express = require('express')
 const router = express.Router()
 const taskController = require('../controllers/tasksControllers')
@@ -10,3 +11,5 @@ module.exports = function() {
     router.get('/api/v1/user/:id', userController.getUserById);
     return router
 }
+
+//--hacia el index root
