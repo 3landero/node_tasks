@@ -1,16 +1,19 @@
-const Sequelize = require(Sequelize)
-const { Sequelize } = require("sequelize/types");
-const { default: dataBase } = require("../config/db");
+// const Sequelize = require(Sequelize)
+const DataTypes = require('sequelize/lib/data-types');
 
-exports.Users = dataBase.define('users', {
+//import dataBase from ('../config/db')
+const dB = require('../config/db')
+
+
+exports.Users = dB.sequelize.define('users', {
     id:{
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true,
     },
-    Name:Sequelize.STRING(50),
-    Last_Name: Sequelize.STRING(50),
-    Email: Sequelize.STRING(50),
-    Password: Sequelize.STRING(50)
+    Name:DataTypes.STRING(50),
+    Last_Name: DataTypes.STRING(50),
+    Email: DataTypes.STRING(50),
+    Password: DataTypes.STRING(50)
 });
 
