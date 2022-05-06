@@ -7,7 +7,8 @@ const logger_morgan = require('morgan')
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectDatabase = require('./SRC/config/connection');
+//const connectDatabase = require('./SRC/config/connection');
+const router = require('./SRC/routes/routes')
 
 app.use(express.json());
 app.use(bodyParser.json());
@@ -18,7 +19,9 @@ app.use(cors({
     origin: '*'
 }));
 
-connectDatabase();
+//connectDatabase();
+
+app.use('/', router )
 
 // Route
 app.get('/', (req, res) => {

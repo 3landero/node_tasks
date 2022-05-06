@@ -1,13 +1,12 @@
-const express = requires('express')
+const express = require('express')
 const router = express.Router()
-const taskController = require('./SRC/controllers/tasksControllers')
-const userController = require('./SRC/controllers/usersControllers')
-
+const taskController = require('../controllers/tasksControllers')
+const userController = require('../controllers/usersControllers')
 
 module.exports = function() {
-    router.get('/tasks/', taskController.getAllTasks);
-    router.get('/task/:id', taskController.getTaskById);
-    router.get('/users/', userController.getAllUsers);
-    router.get('/user/:id', userController.getUserById);
+    router.get('/api/v1/tasks/', taskController.getAllTasks);
+    router.get('/api/v1/task/:id', taskController.getTaskById);
+    router.get('/api/v1/users/', userController.getAllUsers);
+    router.get('/api/v1/user/:id', userController.getUserById);
     return router
 }

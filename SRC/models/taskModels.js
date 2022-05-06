@@ -1,18 +1,22 @@
-const Sequelize = require('sequelize')
-const { default: dataBase } = require("../config/db");
+//const Sequelize = require('sequelize')
 
+const DataTypes = require('sequelize/lib/data-types');
+//const dataBase = require('../config/db')
+const dB = require('../config/db')
+  //sequelize = dB.sequelize,
+  //Sequelize = dB.Sequelize;
 
   
-  exports.Tasks = dataBase.define('Task',{
+  exports.Tasks = dB.sequelize.define('Task',{
     id:{
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true,
     },
-    Title:Sequelize.STRING(50),
-    Dead_line: Sequelize.DATE,
-    Description: Sequelize.STRING(50),
-    isCompleted: Sequelize.BOOLEAN,
-    Priority_name: Sequelize.INTEGER(1),
-    UserId: Sequelize.INTEGER(16)
+    Title:DataTypes.STRING(50),
+    Dead_line: DataTypes.DATE,
+    Description: DataTypes.STRING(50),
+    isCompleted: DataTypes.BOOLEAN,
+    Priority_name: DataTypes.INTEGER(1),
+    UserId: DataTypes.INTEGER(16)
 });
