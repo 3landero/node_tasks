@@ -1,5 +1,5 @@
+//--se crea un controller multi row y otro por id
 const Tasks = require('../models/taskModels')
-
 
 exports.getAllTasks = async (req, res) =>{
     try {
@@ -22,3 +22,5 @@ exports.getTaskById = async (req, res)=>{
         return res.status(500).json({ message: error.message });
     }    
 }
+
+//--hacia routes

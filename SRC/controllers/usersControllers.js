@@ -1,4 +1,7 @@
+//***Controladores */
+//--viene de modelo users
 const Users = require('../models/userModels')
+
 
 exports.getAllUsers = async (req, res) =>{
     try {

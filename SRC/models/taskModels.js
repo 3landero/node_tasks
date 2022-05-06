@@ -1,11 +1,7 @@
-//const Sequelize = require('sequelize')
-
+//Usar datatypes
 const DataTypes = require('sequelize/lib/data-types');
-//const dataBase = require('../config/db')
+//importa la clase database
 const dB = require('../config/db')
-  //sequelize = dB.sequelize,
-  //Sequelize = dB.Sequelize;
-
   
   exports.Tasks = dB.sequelize.define('Task',{
     id:{
